@@ -1,14 +1,23 @@
-:root {
-  --black: rgb(28,28,30);
-  --white: rgb(242, 242, 247);
+@import './colors.css';
+@import './components/dashboard.css';
+@import './components/minesweeper.css';
 
-  --dark-gray: rgb(142,142,147);
-  --light-gray: rgb(209,209,214);
-
-  --red: rgb(255,59,48);
-  --purple: rgb(175,82,222);
-  --yellow: rgb(255,204,0);
-  --cyan: rgb(50,173,230);
-  --blue: rgb(0,122,255);
-  --green: rgb(52,199,89);
+html {
+  font-size: 62.5%;
+  font-family: 'Press Start 2P';
 }
+h1 {
+  font-size: 32px;
+  font-family: 'Press Start 2P';
+  letter-spacing: 1px;
+  color: var(--black);
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
