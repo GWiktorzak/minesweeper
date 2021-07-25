@@ -105,10 +105,23 @@
   box-shadow: rgba(28, 28, 30, 0.25) 0px 30px 60px -12px inset, rgba(142, 142, 147, 0.3) 0px 18px 36px -18px inset;
 }
 
-.mine {
-  background-color: brown;
+
+.open {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: solid 1px var(--dark-gray);
+  background-color: var(--light-gray);
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.open span {
+  font-size: 1.6rem;
 }
 
-.valid {
-  background-color: chartreuse;
+.game-over {
+  background-image: url('../../assets/mine.png');
+  background-position: center;
+  background-size: cover;
 }

@@ -9,6 +9,7 @@ let numberOfCells = 81;
 let allCellsArray = [];
 let shuffledCells = [];
 let cellsInRow = 9;
+
 // Set up Mines amount to Game Level
 levelButtons.addEventListener('click', (e) => {
   let level = e.target.id.split('').pop();
@@ -25,6 +26,23 @@ levelButtons.addEventListener('click', (e) => {
   }
 })
 
+// Click on Cell Action
+const clickCell = (event) => {
+  if (event.target.classList.contains('mine')) {
+    let cell = event.target;
+    cell.classList.add('game-over');
+    console.log(`GAME OVER`)
+  } else {
+    let cell = event.target;
+    let total = cell.getAttribute('data');
+    let span = document.createElement('span');
+    cell.classList.remove('cell')
+    cell.classList.add('open');
+    span.textContent = total;
+    cell.appendChild(span);
+  }
+}
+
 // Create Minesweeper Boady with Cells
 const createBoard = () => {
   // Create Arrey With Shuffled Empty Cells And Mine Cells  
@@ -40,6 +58,7 @@ const createBoard = () => {
     cell.classList.add(shuffledCells[i]);
     gameBody.appendChild(cell);
     allCellsArray.push(cell);
+    cell.addEventListener('click', clickCell);
   }
   checkCell()
 }
@@ -64,6 +83,7 @@ const checkCell = () => {
 
       allCellsArray[i].setAttribute('data', total);
     }
+
     if (allCellsArray[i].classList.contains('valid') && !isLeftEdge && !isRigthEdge && i > 71) {
       if (allCellsArray[i - 1].classList.contains('mine')) total ++
       if (allCellsArray[i + 1].classList.contains('mine')) total ++
@@ -73,6 +93,7 @@ const checkCell = () => {
 
       allCellsArray[i].setAttribute('data', total);
     }
+
     if (isLeftEdge && allCellsArray[i].classList.contains('valid')) {
       if (i >= 0 && allCellsArray[i + 1].classList.contains('mine')) total ++
       if (i >= 0 && i < 71 && allCellsArray[i + 9].classList.contains('mine')) total ++
@@ -82,6 +103,7 @@ const checkCell = () => {
 
       allCellsArray[i].setAttribute('data', total);
     }
+
     if (isRigthEdge && allCellsArray[i].classList.contains('valid')) {
       if (i <= 80 && allCellsArray[i - 1].classList.contains('mine')) total ++
       if (i <= 80 && i > 8 && allCellsArray[i - 9].classList.contains('mine')) total ++
@@ -93,6 +115,8 @@ const checkCell = () => {
     }
   }
 }
+
+
 
 // Start Game Event
 startButton.addEventListener('click', createBoard);
