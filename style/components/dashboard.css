@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin: 1.6rem 0;
 }
 
 .dashboard span {
@@ -15,7 +16,7 @@
 .levels-buttons a {
   border: solid 1px var(--black);
   padding: .8rem 1.6rem;
-  font-size: 1rem;
+  font-size: .9rem;
   cursor: pointer;
 }
 
@@ -27,6 +28,12 @@
 #level1:hover {
   color: var(--black);
   background-color: var(--green);
+  box-shadow: rgba(28,28,30, 0.1) 0px 9px 19px, rgba(28,28,30, 0.1) 0px 7px 6px;
+  transition: all .3s;
+}
+
+#level1:active {
+  box-shadow: none;
 }
 
 #level2 {
@@ -37,6 +44,12 @@
 #level2:hover {
   color: var(--black);
   background-color: var(--yellow);
+  box-shadow: rgba(28,28,30, 0.1) 0px 9px 19px, rgba(28,28,30, 0.1) 0px 7px 6px;
+  transition: all .3s;
+}
+
+#level2:active {
+  box-shadow: none;
 }
 
 #level3 {
@@ -47,4 +60,10 @@
 #level3:hover {
   color: var(--black);
   background-color: var(--red);
+  box-shadow: rgba(28,28,30, 0.1) 0px 9px 19px, rgba(28,28,30, 0.1) 0px 7px 6px;
+  transition: all .3s;
+}
+
+#level3:active {
+  box-shadow: none;
 }

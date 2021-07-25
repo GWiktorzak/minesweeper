@@ -1,6 +1,6 @@
 .minesweeper {
-  width: 30.6rem;
-  height: 30.6rem;
+  width: 30.8rem;
+  height: 30.8rem;
   background-color: aqua;
   display: grid;
   grid-template-columns: 1fr;
@@ -80,10 +80,35 @@
   background-color: var(--black);
 }
 
+/* Minessweep Body */
+.minesweeper-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: solid 1px var(--dark-gray);
+}
 .cell{
-  width: 1.7rem;
-  height: 1.7rem;
-  background-image: url('../../assets/mine.png');
-  background-position: center;
-  background-size: cover;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: solid 1px var(--dark-gray);
+  background-color: var(--light-gray);
+  display: inline-block;
+  box-shadow: rgba(28, 28, 30, 0.25) 0px 50px 100px -20px, rgba(142, 142, 147, .3) 0px 30px 60px -30px, rgba(28, 28, 30, 0.4) 0px -2px 6px 0px inset;
+}
+
+.cell:hover {
+  cursor: pointer;
+}
+
+.cell:active {
+  box-shadow: rgba(28, 28, 30, 0.25) 0px 30px 60px -12px inset, rgba(142, 142, 147, 0.3) 0px 18px 36px -18px inset;
+}
+
+.mine {
+  background-color: brown;
+}
+
+.valid {
+  background-color: chartreuse;
 }
