@@ -58,7 +58,7 @@ div {
   border: 5px solid;
   border-color: var(--white) var(--gray) var(--gray) var(--white);
   box-sizing: border-box;
-  background-image: url('./assets/flag.png');
+  background-image: url('../../assets/flag.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -70,7 +70,7 @@ div {
   background-color: var(--light-gray);
   border-color: var(--dark-gray);
   box-sizing: border-box;
-  background-image: url('./assets/mine.png');
+  background-image: url('../../assets/mine.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
