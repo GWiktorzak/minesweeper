@@ -13,45 +13,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/d7464f0e0a.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header>
     <h1>Minesweeper</h1>
-    <div class="dashboard">
-      <span>Choose level</span>
-      <div class="levels-buttons">
-        <!-- 10 mines -->
-        <a id='level1'>level 1</a>
-        <!-- 40 mines -->
-        <a id='level2'>level 2</a>
-        <!-- 99 mines -->
-        <a id='level3'>level 3</a>
-      </div>
-    </div>
+    <span>Press 🙂 to start</span>
+    <span id='result'></span>
   </header>
-  <main id="game">
-    <div class="minesweeper">
-      <div class="minesweeper-header">
-        <div class="minesweeper-header_counter">
-          <span>000</span>
-        </div>
-        <div class="minesweeper-header_button">
-          <div class="header-button_start">
-            <img src="./assets/happy.png" alt="play minessweeper game">
-          </div>
-        </div>
-        <div class="minesweeper-header_timer">
-          <span>000</span>
-        </div>
-      </div>
-      <div class="minesweeper-body">
 
+  <div class="container">
+    <div class="game">
+      <div class="game-header">
+        <div class="counter"><span id="flags-left"></span></div>
+        <div class="start-btn">
+          <img src="./assets/happy.png" alt="minesweeper game start button">
+        </div>
+        <div class="counter"><span id="timer"></span></div>
       </div>
+      <div class="grid"></div>
     </div>
+  </div>
   </main>
-  <script src="./js/minesweep.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>

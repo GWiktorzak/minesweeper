@@ -5,6 +5,7 @@
 html {
   font-size: 62.5%;
   font-family: 'Press Start 2P';
+  background-color: var(--white);
 }
 h1 {
   font-size: 32px;
