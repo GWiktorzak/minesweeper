@@ -1,12 +1,29 @@
 @import './colors.css';
-@import './components/dashboard.css';
-@import './components/minesweeper.css';
-
+@import './components/game-header.css';
+@import './components/game-body.css';
 html {
-  font-size: 62.5%;
   font-family: 'Press Start 2P';
+  box-sizing: border-box;
   background-color: var(--white);
 }
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
 h1 {
   font-size: 32px;
   font-family: 'Press Start 2P';
@@ -15,10 +32,4 @@ h1 {
   text-align: center;
 }
 
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 

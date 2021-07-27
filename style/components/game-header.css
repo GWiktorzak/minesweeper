@@ -1,0 +1,61 @@
+.game-header {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  align-self: stretch;
+  background-color: var(--light-gray);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border: solid 10px var(--dark-gray);
+  padding: 10px;
+}
+
+/* Header Counter */
+.game-header:first-child {
+  grid-column: 1/2;
+}
+
+.game-header:last-child {
+  grid-column: 3/4;
+}
+
+.game-header span {
+  font-family: 'Orbitron';
+  font-size: 24px;
+  color: var(--red);
+  letter-spacing: 1px;
+  padding: 10px;
+  background-color: var(--black);
+}
+
+
+/* Header Start Button */
+.start-btn {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  align-self: stretch;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-btn img {
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  background: var(--light-gray);
+  border: solid 1px var(--dark-gray);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+/* Header Timer */
+.counter {
+  width: 126px;
+  height: 50px;
+  align-self: center;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
