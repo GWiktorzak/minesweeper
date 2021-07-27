@@ -2,7 +2,7 @@
 Background
 Based on the classic game, Minesweeper. I tried to recreate the gamend.
 
-Objective
+##Objective
 The board is divided into squares. There may be a mine behind it or not. Your goal to open/sweep all tiles with no mine on them. If you click on a mine you lose. If you open all other tiles, you win.
 
 When you left-click on a square with no mine, it will show how many mines are surrounding that square; use this to help you. If that number is none, the square will cascade and open up adjacent tiles with no surrounding mines.
